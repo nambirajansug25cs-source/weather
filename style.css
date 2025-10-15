@@ -1,0 +1,169 @@
+/* --- Global Styles & Reset --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9; /* Light background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+}
+
+header {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+}
+
+/* --- Search Area Styling --- */
+.search-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#city-input {
+    flex-grow: 1; /* Allows input to take up most of the space */
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#city-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#get-data-btn {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#get-data-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* --- Weather Results Area Styling --- */
+.weather-display h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+#weather-result {
+    padding: 20px;
+    min-height: 150px; /* Ensures a minimum height even before data loads */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Specific Weather Card Styling (from JS output) --- */
+.weather-card h2 {
+    font-size: 1.8em;
+    margin-top: 0;
+    color: #333; /* Darker city name */
+}
+
+.weather-icon {
+    width: 100px; /* Size up the icon */
+    height: 100px;
+    margin: -10px auto; /* Adjust margin to center it well */
+}
+
+.temperature {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #dc3545; /* Reddish color for temperature */
+    margin: 0 0 5px 0;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px dashed #eee;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* --- Error and Loading Messages --- */
+.error-message, .loading {
+    font-size: 1.1em;
+    color: #dc3545; /* Red for errors */
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid #dc354530;
+    border-radius: 5px;
+}
+
+.loading {
+    color: #007bff; /* Blue for loading */
+    border-color: #007bff30;
+}
+
+/* --- Footer --- */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes footer to the bottom */
+    background-color: #e9ecef;
+    color: #6c757d;
+    font-size: 0.8em;
+}
+
+/* --- Media Queries for Smaller Screens (Optional but Recommended) --- */
+@media (max-width: 480px) {
+    .search-controls {
+        flex-direction: column;
+    }
+
+    #city-input, #get-data-btn {
+        width: 100%;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
